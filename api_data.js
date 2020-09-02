@@ -5,7 +5,7 @@ define({ "api": [
     "title": "Check email address availability",
     "name": "CheckEmailAvailability",
     "description": "<p>Login a user.</p>",
-    "group": "Users",
+    "group": "AppUsers",
     "version": "0.1.0",
     "header": {
       "fields": {
@@ -26,7 +26,7 @@ define({ "api": [
       }
     },
     "filename": "src/modules/users/user.routes.ts",
-    "groupTitle": "Users"
+    "groupTitle": "AppUsers"
   },
   {
     "type": "post",
@@ -34,7 +34,7 @@ define({ "api": [
     "title": "Check user information",
     "name": "CheckUserInformation",
     "description": "<p>Checks user if available in the system.</p>",
-    "group": "Users",
+    "group": "AppUsers",
     "version": "0.1.0",
     "header": {
       "fields": {
@@ -44,18 +44,12 @@ define({ "api": [
             "optional": false,
             "field": "Content-Type",
             "description": "<p>application/json.</p>"
-          },
-          {
-            "group": "Header",
-            "optional": false,
-            "field": "Authorization",
-            "description": "<p>JWT authentication token.</p>"
           }
         ]
       }
     },
     "filename": "src/modules/users/user.routes.ts",
-    "groupTitle": "Users"
+    "groupTitle": "AppUsers"
   },
   {
     "type": "get",
@@ -63,7 +57,7 @@ define({ "api": [
     "title": "Create new user",
     "name": "CreateUser",
     "description": "<p>Register new user through social networks</p>",
-    "group": "Users",
+    "group": "AppUsers",
     "version": "0.1.0",
     "header": {
       "fields": {
@@ -73,18 +67,12 @@ define({ "api": [
             "optional": false,
             "field": "Content-Type",
             "description": "<p>application/json.</p>"
-          },
-          {
-            "group": "Header",
-            "optional": false,
-            "field": "Authorization",
-            "description": "<p>JWT authentication token.</p>"
           }
         ]
       }
     },
     "filename": "src/modules/users/user.routes.ts",
-    "groupTitle": "Users"
+    "groupTitle": "AppUsers"
   },
   {
     "type": "post",
@@ -92,7 +80,7 @@ define({ "api": [
     "title": "Login",
     "name": "LoginUser",
     "description": "<p>Login a user.</p>",
-    "group": "Users",
+    "group": "CMSUsers",
     "version": "0.1.0",
     "header": {
       "fields": {
@@ -161,7 +149,7 @@ define({ "api": [
       ]
     },
     "filename": "src/modules/users/user.routes.ts",
-    "groupTitle": "Users"
+    "groupTitle": "CMSUsers"
   },
   {
     "type": "post",
@@ -169,7 +157,7 @@ define({ "api": [
     "title": "Register User",
     "name": "RegisterUser",
     "description": "<p>Register</p>",
-    "group": "Users",
+    "group": "CMSUsers",
     "version": "0.1.0",
     "header": {
       "fields": {
@@ -266,6 +254,6 @@ define({ "api": [
       }
     },
     "filename": "src/modules/users/user.routes.ts",
-    "groupTitle": "Users"
+    "groupTitle": "CMSUsers"
   }
 ] });
