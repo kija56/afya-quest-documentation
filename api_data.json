@@ -1,5 +1,300 @@
 [
   {
+    "type": "patch",
+    "url": "/accessControl/roles/:id/approve",
+    "title": "Approve Role",
+    "name": "ApproveRole",
+    "description": "<p>Approve User Role</p>",
+    "group": "Access_Control",
+    "version": "0.1.0",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "optional": false,
+            "field": "Content-Type",
+            "description": "<p>application/json.</p>"
+          },
+          {
+            "group": "Header",
+            "optional": false,
+            "field": "Authorization",
+            "description": "<p>JWT authentication token.</p>"
+          }
+        ]
+      }
+    },
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "role",
+            "description": "<p>Role ID</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Array",
+            "optional": false,
+            "field": "added[]",
+            "description": "<p>Updated Descriptions of the role.</p>"
+          }
+        ]
+      }
+    },
+    "filename": "src/modules/accessControl/accessControl.routes.ts",
+    "groupTitle": "Access_Control"
+  },
+  {
+    "type": "post",
+    "url": "/accessControl/roles",
+    "title": "Create New Role",
+    "name": "CreateRole",
+    "description": "<p>Create New Role</p>",
+    "group": "Access_Control",
+    "version": "0.1.0",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "optional": false,
+            "field": "Content-Type",
+            "description": "<p>application/json.</p>"
+          },
+          {
+            "group": "Header",
+            "optional": false,
+            "field": "Authorization",
+            "description": "<p>JWT authentication token.</p>"
+          }
+        ]
+      }
+    },
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "name",
+            "description": "<p>Name of the role.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "description",
+            "description": "<p>Descriptions of the role.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Array",
+            "optional": false,
+            "field": "permissions",
+            "description": "<p>Permissions of the role.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "approvalStatus",
+            "description": "<p>Approve Status of the Role</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Request-Response:",
+          "content": "    {\n\"approvalStatus\": 0,\n\"_id\": \"5f60c964bbbc7b2db4ea549b\",\n\"name\": \"Administrator\",\n\"description\": \"Controls all system activities\",\n\"createdAt\": \"2020-09-15T14:02:12.035Z\",\n\"updatedAt\": \"2020-09-15T14:02:12.035Z\",\n\"__v\": 0\n    },",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "src/modules/accessControl/accessControl.routes.ts",
+    "groupTitle": "Access_Control"
+  },
+  {
+    "type": "get",
+    "url": "/accessControl/permissions",
+    "title": "Fetch All Permissions",
+    "name": "Get_All_Permissions",
+    "description": "<p>Get all Permissions</p>",
+    "group": "Access_Control",
+    "version": "0.1.0",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "optional": false,
+            "field": "Content-Type",
+            "description": "<p>application/json.</p>"
+          },
+          {
+            "group": "Header",
+            "optional": false,
+            "field": "Authorization",
+            "description": "<p>JWT authentication token.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Request-Response:",
+          "content": "   [\n    {\n        \"_id\": \"5f607b1d5b853905d0883d27\",\n        \"moduleName\": \"access-control\",\n        \"displayName\": \"Can create,update and delete role\",\n        \"genericName\": \"write-roles\",\n        \"createdAt\": \"2020-09-15T08:28:13.963Z\",\n        \"updatedAt\": \"2020-09-15T08:28:13.963Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"5f607b1d5b853905d0883d28\",\n        \"moduleName\": \"staff\",\n        \"displayName\": \"Can create,update and delete staff \",\n        \"genericName\": \"write-staff\",\n        \"createdAt\": \"2020-09-15T08:28:13.990Z\",\n        \"updatedAt\": \"2020-09-15T08:28:13.990Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"5f607b1e5b853905d0883d2d\",\n        \"moduleName\": \"access-control\",\n        \"displayName\": \"Can approve role\",\n        \"genericName\": \"approve-roles\",\n        \"createdAt\": \"2020-09-15T08:28:14.096Z\",\n        \"updatedAt\": \"2020-09-15T08:28:14.096Z\",\n        \"__v\": 0\n    }\n]",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "src/modules/accessControl/accessControl.routes.ts",
+    "groupTitle": "Access_Control"
+  },
+  {
+    "type": "get",
+    "url": "/accessControl/roles",
+    "title": "Fetch All Roles",
+    "name": "Get_All_Roles",
+    "description": "<p>Get All Role</p>",
+    "group": "Access_Control",
+    "version": "0.1.0",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "optional": false,
+            "field": "Content-Type",
+            "description": "<p>application/json.</p>"
+          },
+          {
+            "group": "Header",
+            "optional": false,
+            "field": "Authorization",
+            "description": "<p>JWT authentication token.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Request-Response:",
+          "content": "    [\n    {\n        \"_id\": \"5f607b1e5b853905d0883d2f\",\n        \"approvalStatus\": 1,\n        \"name\": \"appUser\",\n        \"description\": \"Normal user\",\n        \"createdAt\": \"2020-09-15T08:28:14.431Z\",\n        \"updatedAt\": \"2020-09-15T08:28:14.431Z\",\n        \"__v\": 0,\n        \"rolePermissions\": {\n            \"permissions\": []\n        }\n    },\n    {\n        \"_id\": \"5f60c964bbbc7b2db4ea549b\",\n        \"approvalStatus\": 0,\n        \"name\": \"Administrator\",\n        \"description\": \"Controls all system activities\",\n        \"createdAt\": \"2020-09-15T14:02:12.035Z\",\n        \"updatedAt\": \"2020-09-15T14:02:12.035Z\",\n        \"__v\": 0,\n        \"rolePermissions\": {\n            \"permissions\": []\n        }\n    }\n]",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "src/modules/accessControl/accessControl.routes.ts",
+    "groupTitle": "Access_Control"
+  },
+  {
+    "type": "patch",
+    "url": "/accessControl/grantPermission",
+    "title": "Assign or Unassign Permissions to a Role",
+    "name": "GrantPermission",
+    "description": "<p>Grant Permissions to a Role</p>",
+    "group": "Access_Control",
+    "version": "0.1.0",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "optional": false,
+            "field": "Content-Type",
+            "description": "<p>application/json.</p>"
+          },
+          {
+            "group": "Header",
+            "optional": false,
+            "field": "Authorization",
+            "description": "<p>JWT authentication token.</p>"
+          }
+        ]
+      }
+    },
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "role",
+            "description": "<p>Role ID</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Array",
+            "optional": false,
+            "field": "added[]",
+            "description": "<p>Updated Descriptions of the role.</p>"
+          }
+        ]
+      }
+    },
+    "filename": "src/modules/accessControl/accessControl.routes.ts",
+    "groupTitle": "Access_Control"
+  },
+  {
+    "type": "patch",
+    "url": "/accessControl/roles/:id",
+    "title": "Update Role",
+    "name": "UpdateRole",
+    "description": "<p>Update Role</p>",
+    "group": "Access_Control",
+    "version": "0.1.0",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "optional": false,
+            "field": "Content-Type",
+            "description": "<p>application/json.</p>"
+          },
+          {
+            "group": "Header",
+            "optional": false,
+            "field": "Authorization",
+            "description": "<p>JWT authentication token.</p>"
+          }
+        ]
+      }
+    },
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "name",
+            "description": "<p>New Name of the Role.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "description",
+            "description": "<p>Updated Descriptions of the role.</p>"
+          }
+        ]
+      }
+    },
+    "filename": "src/modules/accessControl/accessControl.routes.ts",
+    "groupTitle": "Access_Control"
+  },
+  {
     "type": "get",
     "url": "/app/email-check",
     "title": "Check email address availability",
