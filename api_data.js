@@ -617,71 +617,6 @@ define({ "api": [
     "groupTitle": "HCP_Groups"
   },
   {
-    "type": "patch",
-    "url": "/hcp-groups/groups",
-    "title": "Update Health Care Provider Group",
-    "name": "CreateHCPGroup",
-    "description": "<p>Update Health Care Provider Group</p>",
-    "group": "HCP_Groups",
-    "version": "0.1.0",
-    "header": {
-      "fields": {
-        "Header": [
-          {
-            "group": "Header",
-            "optional": false,
-            "field": "Content-Type",
-            "description": "<p>application/json.</p>"
-          },
-          {
-            "group": "Header",
-            "optional": false,
-            "field": "Authorization",
-            "description": "<p>JWT authentication token.</p>"
-          }
-        ]
-      }
-    },
-    "parameter": {
-      "fields": {
-        "Parameter": [
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": "name",
-            "description": "<p>HCP Group Name.</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": "description",
-            "description": "<p>Descriptions of HCP group.</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": "coverImage",
-            "description": "<p>Image of the HCP group.</p>"
-          }
-        ]
-      }
-    },
-    "success": {
-      "examples": [
-        {
-          "title": "Request-Response:",
-          "content": "     {\n    \"_id\": \"5f7c6b46337b17397c44ec1b\",\n    \"name\": \"General Medical Practitioners\",\n    \"description\": \"This is test group\",\n    \"coverImage\": \"test image\",\n    \"createdAt\": \"2020-10-06T13:04:06.929Z\",\n    \"updatedAt\": \"2020-10-06T13:04:06.929Z\",\n    \"__v\": 0\n}",
-          "type": "json"
-        }
-      ]
-    },
-    "filename": "src/modules/hcpGroups/hcpGroup.routes.ts",
-    "groupTitle": "HCP_Groups"
-  },
-  {
     "type": "delete",
     "url": "/hcp-groups/groups/:groupId",
     "title": "Delete Health Care Provider Group",
@@ -788,6 +723,71 @@ define({ "api": [
         {
           "title": "Request-Response:",
           "content": "    {\n    \"_id\": \"5f7c6b46337b17397c44ec1b\",\n    \"name\": \"General Medical Practitioners\",\n    \"description\": \"This is test group\",\n    \"coverImage\": \"test image\",\n    \"createdAt\": \"2020-10-06T13:04:06.929Z\",\n    \"updatedAt\": \"2020-10-06T13:04:06.929Z\",\n    \"__v\": 0\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "src/modules/hcpGroups/hcpGroup.routes.ts",
+    "groupTitle": "HCP_Groups"
+  },
+  {
+    "type": "patch",
+    "url": "/hcp-groups/groups",
+    "title": "Update Health Care Provider Group",
+    "name": "UpdateHCPGroup",
+    "description": "<p>Update Health Care Provider Group</p>",
+    "group": "HCP_Groups",
+    "version": "0.1.0",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "optional": false,
+            "field": "Content-Type",
+            "description": "<p>application/json.</p>"
+          },
+          {
+            "group": "Header",
+            "optional": false,
+            "field": "Authorization",
+            "description": "<p>JWT authentication token.</p>"
+          }
+        ]
+      }
+    },
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "name",
+            "description": "<p>HCP Group Name.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "description",
+            "description": "<p>Descriptions of HCP group.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "coverImage",
+            "description": "<p>Image of the HCP group.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Request-Response:",
+          "content": "     {\n    \"_id\": \"5f7c6b46337b17397c44ec1b\",\n    \"name\": \"General Medical Practitioners\",\n    \"description\": \"This is test group\",\n    \"coverImage\": \"test image\",\n    \"createdAt\": \"2020-10-06T13:04:06.929Z\",\n    \"updatedAt\": \"2020-10-06T13:04:06.929Z\",\n    \"__v\": 0\n}",
           "type": "json"
         }
       ]
