@@ -1,6 +1,6 @@
 {
   "title": "Afya Quest API Documentation",
-  "url": "https://api.github.com/v1",
+  "url": "https://afyaquest-api.herokuapp.com/v1",
   "name": "afyaquest-api",
   "version": "1.0.0",
   "description": "This is an API to serve the Afya Quest CMS and Afya Quest mobile application",
@@ -9,7 +9,7 @@
   "apidoc": "0.3.0",
   "generator": {
     "name": "apidoc",
-    "time": "2020-10-07T10:43:40.657Z",
+    "time": "2020-10-07T11:06:52.747Z",
     "url": "http://apidocjs.com",
     "version": "0.24.0"
   }
